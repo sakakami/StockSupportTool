@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.HomeV"
+    android:background="@color/black">
+
+    <View
+        android:id="@+id/viewA"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="114dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/bg_surround_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTitleA"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="@string/view_a_title"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/viewA"
+        app:layout_constraintEnd_toEndOf="@+id/viewA"
+        app:layout_constraintStart_toStartOf="@+id/viewA"
+        app:layout_constraintTop_toTopOf="@+id/viewA" />
+
+    <TextView
+        android:id="@+id/txtCost"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/view_a_title_cost"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/viewA"
+        app:layout_constraintTop_toTopOf="@+id/viewA" />
+
+    <EditText
+        android:id="@+id/editCost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/txtCost"
+        app:layout_constraintEnd_toEndOf="@+id/viewA"
+        app:layout_constraintStart_toEndOf="@+id/txtCost"
+        app:layout_constraintTop_toTopOf="@+id/txtCost" />
+
+    <TextView
+        android:id="@+id/txtBuy"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/view_a_title_buy"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/viewA"
+        app:layout_constraintTop_toBottomOf="@+id/txtCost" />
+
+    <TextView
+        android:id="@+id/txtBuyResult"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/viewA"
+        app:layout_constraintStart_toEndOf="@+id/txtBuy"
+        app:layout_constraintTop_toTopOf="@+id/txtBuy" />
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/view_a_title_fee"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/viewA"
+        app:layout_constraintTop_toBottomOf="@+id/txtBuy" />
+
+    <TextView
+        android:id="@+id/txtBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/view_a_title_balance"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/viewA"
+        app:layout_constraintTop_toBottomOf="@+id/checkbox" />
+
+    <TextView
+        android:id="@+id/txtBalanceResult"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/viewA"
+        app:layout_constraintStart_toEndOf="@+id/txtBalance"
+        app:layout_constraintTop_toTopOf="@+id/txtBalance" />
+
+    <EditText
+        android:id="@+id/editFee"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/white"
+        android:hint="@string/view_a_title_fee_hint"
+        android:textColorHint="@color/gray_white"
+        app:layout_constraintBottom_toBottomOf="@+id/checkbox"
+        app:layout_constraintEnd_toEndOf="@+id/viewA"
+        app:layout_constraintStart_toEndOf="@+id/checkbox"
+        app:layout_constraintTop_toTopOf="@+id/checkbox" />
+
+    <View
+        android:id="@+id/viewBarA"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/viewA"
+        app:layout_constraintEnd_toEndOf="@+id/viewA"
+        app:layout_constraintStart_toStartOf="@+id/viewA"
+        app:layout_constraintTop_toBottomOf="@+id/viewA" />
+
+    <View
+        android:id="@+id/viewB"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/bg_surround_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewA" />
+
+    <TextView
+        android:id="@+id/txtTitleB"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="@string/view_b_title"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/viewB"
+        app:layout_constraintEnd_toEndOf="@+id/viewB"
+        app:layout_constraintStart_toStartOf="@+id/viewB"
+        app:layout_constraintTop_toTopOf="@+id/viewB" />
+
+    <TextView
+        android:id="@+id/txtTarget"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/view_b_title_target"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/viewB"
+        app:layout_constraintTop_toTopOf="@+id/viewB" />
+
+    <EditText
+        android:id="@+id/editTarget"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTarget"
+        app:layout_constraintEnd_toEndOf="@+id/viewB"
+        app:layout_constraintStart_toEndOf="@+id/txtTarget"
+        app:layout_constraintTop_toTopOf="@+id/txtTarget" />
+
+    <TextView
+        android:id="@+id/txtStock"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/view_b_title_stock"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/viewB"
+        app:layout_constraintTop_toBottomOf="@+id/txtTarget" />
+
+    <EditText
+        android:id="@+id/editStock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/txtStock"
+        app:layout_constraintEnd_toEndOf="@+id/viewB"
+        app:layout_constraintStart_toEndOf="@+id/txtStock"
+        app:layout_constraintTop_toTopOf="@+id/txtStock" />
+
+    <TextView
+        android:id="@+id/txtIncome"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/view_b_title_income"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/viewB"
+        app:layout_constraintTop_toBottomOf="@+id/txtStock" />
+
+    <TextView
+        android:id="@+id/txtIncomeResult"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtIncome"
+        app:layout_constraintEnd_toEndOf="@+id/viewB"
+        app:layout_constraintStart_toEndOf="@+id/txtIncome"
+        app:layout_constraintTop_toTopOf="@+id/txtIncome" />
+
+    <TextView
+        android:id="@+id/txtRate"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/view_b_title_rate"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/viewB"
+        app:layout_constraintTop_toBottomOf="@+id/txtIncome" />
+
+    <TextView
+        android:id="@+id/txtRateResult"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtRate"
+        app:layout_constraintEnd_toEndOf="@+id/viewB"
+        app:layout_constraintStart_toEndOf="@+id/txtRate"
+        app:layout_constraintTop_toTopOf="@+id/txtRate" />
+
+    <View
+        android:id="@+id/viewBarB"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/viewB"
+        app:layout_constraintEnd_toEndOf="@+id/viewB"
+        app:layout_constraintStart_toStartOf="@+id/viewB"
+        app:layout_constraintTop_toBottomOf="@+id/viewB" />
+
+    <View
+        android:id="@+id/viewC"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/bg_surround_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewB" />
+
+    <TextView
+        android:id="@+id/txtCalculate"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="@string/view_d_title_calculate"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/viewC"
+        app:layout_constraintEnd_toEndOf="@+id/viewC"
+        app:layout_constraintStart_toStartOf="@+id/viewC"
+        app:layout_constraintTop_toTopOf="@+id/viewC" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

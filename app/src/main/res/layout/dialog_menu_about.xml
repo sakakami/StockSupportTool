@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/txtTitleVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:text="@string/view_c_title_version"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtResultVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/txtTitleVersion"
+        app:layout_constraintTop_toTopOf="@+id/txtTitleVersion" />
+
+    <TextView
+        android:id="@+id/txtTitleDeveloper"
+        android:layout_width="wrap_content"
+        android:layout_height="30sp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/view_c_title_developer"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtTitleVersion"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitleVersion" />
+
+    <TextView
+        android:id="@+id/txtTitleRate"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/view_c_title_rate"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtTitleDeveloper"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitleDeveloper" />
+
+    <TextView
+        android:id="@+id/txtResultRate"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/txtTitleRate"
+        app:layout_constraintTop_toTopOf="@+id/txtTitleRate" />
+
+    <TextView
+        android:id="@+id/txtTitleProject"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/view_c_title_project"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtTitleRate"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitleRate" />
+
+    <TextView
+        android:id="@+id/txtResultProject"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/txtTitleProject"
+        app:layout_constraintTop_toTopOf="@+id/txtTitleProject" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Stock Support Tool</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="confirm">確認</string>
+    <string name="error_message_cost">成本均價不可為零，請重新輸入。</string>
+    <string name="error_message_fee">手續費不可為零，請重新輸入。</string>
+    <string name="error_message_target">目標價格不可為零，請重新輸入。</string>
+    <string name="error_message_stock">持有股數不可為零，請重新輸入。</string>
+    <string name="view_a_title">損益平衡推估</string>
+    <string name="view_a_title_cost">成本均價：</string>
+    <string name="view_a_title_buy">買入均價：</string>
+    <string name="view_a_title_balance">損益平衡：</string>
+    <string name="view_a_title_fee">手續費：</string>
+    <string name="view_a_title_fee_hint">預設為1.45‰</string>
+    <string name="view_b_title">損益推估</string>
+    <string name="view_b_title_stock">持有股數：</string>
+    <string name="view_b_title_target">目標價格：</string>
+    <string name="view_b_title_income">預估損益：</string>
+    <string name="view_b_title_rate">損益率：</string>
+    <string name="view_c_title">關於</string>
+    <string name="view_c_title_version">版本：</string>
+    <string name="view_c_title_developer">開發者：MySoft Studio</string>
+    <string name="view_c_title_rate">評價App：</string>
+    <string name="view_c_title_project">專案頁面：</string>
+    <string name="view_d_title_calculate">計算</string>
+    <string name="menu_title_a">關於</string>
+</resources>
