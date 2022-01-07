@@ -3,6 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="confirm">確認</string>
+    <string name="tool_bar_title">股市小工具</string>
     <string name="error_message_cost">成本均價不可為零，請重新輸入。</string>
     <string name="error_message_fee">手續費不可為零，請重新輸入。</string>
     <string name="error_message_target">目標價格不可為零，請重新輸入。</string>
@@ -22,7 +23,10 @@
     <string name="view_c_title_version">版本：</string>
     <string name="view_c_title_developer">開發者：MySoft Studio</string>
     <string name="view_c_title_rate">評價App：</string>
+    <string name="view_c_result_rate"><u>Rate my app</u></string>
     <string name="view_c_title_project">專案頁面：</string>
+    <string name="view_c_result_project"><u>GitHub</u></string>
     <string name="view_d_title_calculate">計算</string>
     <string name="menu_title_a">關於</string>
+    <string name="menu_title_b">夜晚模式</string>
 </resources>

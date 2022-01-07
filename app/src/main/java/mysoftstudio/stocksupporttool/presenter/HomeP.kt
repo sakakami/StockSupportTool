@@ -1,11 +1,15 @@
 package mysoftstudio.stocksupporttool.presenter
 
+import androidx.appcompat.app.AppCompatDelegate
+import mysoftstudio.stocksupporttool.Preferences
 import mysoftstudio.stocksupporttool.R
 import mysoftstudio.stocksupporttool.data.ResultData
 import mysoftstudio.stocksupporttool.data.StockData
 import mysoftstudio.stocksupporttool.view.vi.HomeVI
+import java.math.BigDecimal
 
 class HomeP(private val vi: HomeVI) {
+    private var checked by Preferences("isChecked", false)
 
     fun handleCalculate(data: StockData) {
         val resultData = ResultData()
@@ -26,12 +30,23 @@ class HomeP(private val vi: HomeVI) {
                     rate = difference / balance * 100.0
                     income = (difference * data.stock).toInt()
                 }
-                resultData.buy = buy
-                resultData.balance = balance
-                resultData.income = income
-                resultData.rate = rate
+                //透過BigDecimal將結果四捨五入至小數點第二位
+                resultData.buy = BigDecimal(buy).setScale(2, BigDecimal.ROUND_HALF_UP).toDouble()
+                resultData.balance = BigDecimal(balance).setScale(2, BigDecimal.ROUND_HALF_UP).toDouble()
+                resultData.income = BigDecimal(income).setScale(0, BigDecimal.ROUND_HALF_UP).toInt()
+                resultData.rate = BigDecimal(rate).setScale(2, BigDecimal.ROUND_HALF_UP).toString() + " %"
                 vi.showResult(resultData)
             }
+        }
+    }
+
+    fun switchDayNightMode() {
+        if (checked) {
+            checked = false
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        } else {
+            checked = true
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         }
     }
 }
