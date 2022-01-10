@@ -5,4 +5,5 @@ import mysoftstudio.stocksupporttool.data.ResultData
 interface HomeVI {
     fun showErrorMessage(resource: Int)
     fun showResult(resultData: ResultData)
+    fun showAbout()
 }
