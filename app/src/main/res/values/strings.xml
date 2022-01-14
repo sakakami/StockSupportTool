@@ -10,13 +10,16 @@
     <string name="error_message_stock">持有股數不可為零，請重新輸入。</string>
     <string name="view_a_title">損益平衡推估</string>
     <string name="view_a_title_cost">成本均價：</string>
+    <string name="view_a_title_cost_hint">請輸入購入成本均價</string>
     <string name="view_a_title_buy">買入均價：</string>
     <string name="view_a_title_balance">損益平衡：</string>
     <string name="view_a_title_fee">手續費：</string>
     <string name="view_a_title_fee_hint">預設為1.45‰</string>
     <string name="view_b_title">損益推估</string>
     <string name="view_b_title_stock">持有股數：</string>
+    <string name="view_b_title_stock_hint">請輸入目前持有股數</string>
     <string name="view_b_title_target">目標價格：</string>
+    <string name="view_b_title_target_hint">請輸入預計賣出的價格</string>
     <string name="view_b_title_income">預估損益：</string>
     <string name="view_b_title_rate">損益率：</string>
     <string name="view_c_title">關於</string>

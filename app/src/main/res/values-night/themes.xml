@@ -31,4 +31,7 @@
     <style name="viewBar2Style">
         <item name="android:background">@color/black2</item>
     </style>
+    <style name="TextViewStyle2">
+        <item name="android:textColor">@color/white</item>
+    </style>
 </resources>
