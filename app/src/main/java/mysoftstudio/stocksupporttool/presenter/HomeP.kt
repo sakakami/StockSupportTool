@@ -17,20 +17,22 @@ class HomeP(private val vi: HomeVI) {
     private var stock = 0
 
     fun handleCost(txt: String) {
-        if (txt.isNotEmpty()) cost = if (txt != ".") txt.toDouble() else "0$txt".toDouble()
+        cost = if (txt.isNotEmpty()) if (txt != ".") txt.toDouble() else "0$txt".toDouble() else 0.0
     }
 
     fun handleCheck(checked: Boolean) { isCheck = checked }
 
     fun handleFee(txt: String) {
-        if (txt.isNotEmpty()) fee = if (txt != ".") txt.toDouble() else "0$txt".toDouble()
+        fee = if (txt.isNotEmpty()) if (txt != ".") txt.toDouble() else "0$txt".toDouble() else 0.00145
     }
 
     fun handleTarget(txt: String) {
-        if (txt.isNotEmpty()) target = if (txt != ".") txt.toDouble() else "0$txt".toDouble()
+        target = if (txt.isNotEmpty()) if (txt != ".") txt.toDouble() else "0$txt".toDouble() else 0.0
     }
 
-    fun handleStock(txt: String) { if (txt.isNotEmpty()) stock = txt.toDouble().toInt() }
+    fun handleStock(txt: String) {
+        stock = if (txt.isNotEmpty()) txt.toDouble().toInt() else 0
+    }
 
     fun handleCalculate() {
         val resultData = ResultData()
@@ -38,6 +40,7 @@ class HomeP(private val vi: HomeVI) {
         var balance = 0.0
         var income = 0
         var rate = 0.0
+        vi.showResult(resultData)
         when {
             cost == 0.0 -> vi.showErrorMessage(R.string.error_message_cost)
             isCheck && fee == 0.0 -> vi.showErrorMessage(R.string.error_message_fee)

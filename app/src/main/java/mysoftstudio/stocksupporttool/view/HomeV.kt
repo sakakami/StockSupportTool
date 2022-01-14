@@ -89,5 +89,6 @@ class HomeV : Fragment(), HomeVI {
         //設定menu內夜間模式是否啟用
         binding.toolbar.menu.findItem(R.id.menu_switch).isChecked = checked
         binding.toolbar.setOnMenuItemClickListener { p.handleMenuClick(it) }
+        showResult(ResultData())
     }
 }

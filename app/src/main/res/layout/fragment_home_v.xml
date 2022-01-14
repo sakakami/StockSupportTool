@@ -75,13 +75,13 @@
 
     <EditText
         android:id="@+id/editCost"
+        style="@style/EditTextStyle"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
         android:layout_marginEnd="16dp"
-        android:maxLines="1"
         android:hint="@string/view_a_title_cost_hint"
-        style="@style/EditTextStyle"
+        android:maxLines="1"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/txtCost"
         app:layout_constraintEnd_toEndOf="@+id/viewA"
         app:layout_constraintStart_toEndOf="@+id/txtCost"
@@ -101,13 +101,12 @@
 
     <TextView
         android:id="@+id/txtBuyResult"
+        style="@style/TextViewStyle"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
         android:layout_marginEnd="16dp"
         android:gravity="center_vertical"
         android:textSize="20sp"
-        style="@style/TextViewStyle"
         app:layout_constraintEnd_toEndOf="@+id/viewA"
         app:layout_constraintStart_toEndOf="@+id/txtBuy"
         app:layout_constraintTop_toTopOf="@+id/txtBuy" />
@@ -138,27 +137,26 @@
 
     <TextView
         android:id="@+id/txtBalanceResult"
+        style="@style/TextViewStyle"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
         android:layout_marginEnd="16dp"
         android:gravity="center_vertical"
         android:textSize="20sp"
-        style="@style/TextViewStyle"
         app:layout_constraintEnd_toEndOf="@+id/viewA"
         app:layout_constraintStart_toEndOf="@+id/txtBalance"
         app:layout_constraintTop_toTopOf="@+id/txtBalance" />
 
     <EditText
         android:id="@+id/editFee"
+        style="@style/EditTextStyle"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
         android:layout_marginEnd="16dp"
         android:hint="@string/view_a_title_fee_hint"
         android:inputType="numberDecimal"
         android:maxLines="1"
-        style="@style/EditTextStyle"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/checkbox"
         app:layout_constraintEnd_toEndOf="@+id/viewA"
         app:layout_constraintStart_toEndOf="@+id/checkbox"
@@ -218,14 +216,14 @@
 
     <EditText
         android:id="@+id/editTarget"
+        style="@style/EditTextStyle"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
         android:layout_marginEnd="16dp"
+        android:hint="@string/view_b_title_target_hint"
         android:inputType="numberDecimal"
         android:maxLines="1"
-        android:hint="@string/view_b_title_target_hint"
-        style="@style/EditTextStyle"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/txtTarget"
         app:layout_constraintEnd_toEndOf="@+id/viewB"
         app:layout_constraintStart_toEndOf="@+id/txtTarget"
@@ -245,14 +243,14 @@
 
     <EditText
         android:id="@+id/editStock"
+        style="@style/EditTextStyle"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
         android:layout_marginEnd="16dp"
+        android:hint="@string/view_b_title_stock_hint"
         android:inputType="number"
         android:maxLines="1"
-        android:hint="@string/view_b_title_stock_hint"
-        style="@style/EditTextStyle"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/txtStock"
         app:layout_constraintEnd_toEndOf="@+id/viewB"
         app:layout_constraintStart_toEndOf="@+id/txtStock"
@@ -272,13 +270,12 @@
 
     <TextView
         android:id="@+id/txtIncomeResult"
+        style="@style/TextViewStyle"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginStart="8dp"
         android:layout_marginEnd="16dp"
         android:gravity="center_vertical"
         android:textSize="20sp"
-        style="@style/TextViewStyle"
         app:layout_constraintBottom_toBottomOf="@+id/txtIncome"
         app:layout_constraintEnd_toEndOf="@+id/viewB"
         app:layout_constraintStart_toEndOf="@+id/txtIncome"
@@ -298,13 +295,12 @@
 
     <TextView
         android:id="@+id/txtRateResult"
+        style="@style/TextViewStyle"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
         android:layout_marginEnd="16dp"
         android:gravity="center_vertical"
         android:textSize="20sp"
-        style="@style/TextViewStyle"
         app:layout_constraintBottom_toBottomOf="@+id/txtRate"
         app:layout_constraintEnd_toEndOf="@+id/viewB"
         app:layout_constraintStart_toEndOf="@+id/txtRate"
