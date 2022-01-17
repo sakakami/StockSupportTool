@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="235dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -180,7 +180,7 @@
         android:layout_width="0dp"
         android:layout_height="235dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -320,10 +320,10 @@
 
     <View
         android:id="@+id/viewC"
+        style="@style/viewStyle"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginTop="48dp"
-        style="@style/viewStyle"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewB" />

@@ -8,7 +8,7 @@
         <entry key="app/src/main/res/drawable/bg_surround_white.xml" value="0.2296875" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/dialog_menu_about.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/fragment_home_v.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_home_v.xml" value="0.165" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.21354166666666666" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.11927083333333334" />
       </map>

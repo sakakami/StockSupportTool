@@ -7,12 +7,12 @@
     <TextView
         android:id="@+id/txtTitleVersion"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:gravity="center_vertical"
         android:text="@string/view_c_title_version"
-        android:textSize="24sp"
+        android:textSize="18sp"
         style="@style/TextViewStyle2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,10 +20,10 @@
     <TextView
         android:id="@+id/txtResultVersion"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:layout_marginStart="8dp"
         android:gravity="center_vertical"
-        android:textSize="24sp"
+        android:textSize="18sp"
         style="@style/TextViewStyle2"
         app:layout_constraintStart_toEndOf="@+id/txtTitleVersion"
         app:layout_constraintTop_toTopOf="@+id/txtTitleVersion" />
@@ -31,11 +31,11 @@
     <TextView
         android:id="@+id/txtTitleDeveloper"
         android:layout_width="wrap_content"
-        android:layout_height="40sp"
+        android:layout_height="30sp"
         android:layout_marginTop="8dp"
         android:gravity="center_vertical"
         android:text="@string/view_c_title_developer"
-        android:textSize="24sp"
+        android:textSize="18sp"
         style="@style/TextViewStyle2"
         app:layout_constraintStart_toStartOf="@+id/txtTitleVersion"
         app:layout_constraintTop_toBottomOf="@+id/txtTitleVersion" />
@@ -43,11 +43,11 @@
     <TextView
         android:id="@+id/txtTitleRate"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:layout_marginTop="8dp"
         android:gravity="center_vertical"
         android:text="@string/view_c_title_rate"
-        android:textSize="24sp"
+        android:textSize="18sp"
         style="@style/TextViewStyle2"
         app:layout_constraintStart_toStartOf="@+id/txtTitleDeveloper"
         app:layout_constraintTop_toBottomOf="@+id/txtTitleDeveloper" />
@@ -55,13 +55,13 @@
     <TextView
         android:id="@+id/txtResultRate"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:gravity="center_vertical"
         android:text="@string/view_c_result_rate"
         android:textColor="@color/red"
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/txtTitleRate"
@@ -70,10 +70,10 @@
     <TextView
         android:id="@+id/txtTitleProject"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:layout_marginTop="8dp"
         android:text="@string/view_c_title_project"
-        android:textSize="24sp"
+        android:textSize="18sp"
         style="@style/TextViewStyle2"
         app:layout_constraintStart_toStartOf="@+id/txtTitleRate"
         app:layout_constraintTop_toBottomOf="@+id/txtTitleRate" />
@@ -81,12 +81,12 @@
     <TextView
         android:id="@+id/txtResultProject"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:text="@string/view_c_result_project"
         android:textColor="@color/red"
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txtTitleProject"
         app:layout_constraintTop_toTopOf="@+id/txtTitleProject" />

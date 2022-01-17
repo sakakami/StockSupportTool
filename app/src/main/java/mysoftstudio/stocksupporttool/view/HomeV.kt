@@ -60,8 +60,10 @@ class HomeV : Fragment(), HomeVI {
         val view = DialogMenuAboutBinding.inflate(LayoutInflater.from(requireContext()))
         val version = requireContext().packageManager.getPackageInfo(requireContext().packageName, 0).versionName
         val project = Intent(Intent.ACTION_VIEW).apply { data = Uri.parse("https://github.com/sakakami/StockSupportTool") }
+        val rate = Intent(Intent.ACTION_VIEW).apply { data = Uri.parse("https://play.google.com/store/apps/details?id=mysoftstudio.stocksupporttool") }
         view.txtResultVersion.text = version
         view.txtResultProject.setOnClickListener { startActivity(project) }
+        view.txtResultRate.setOnClickListener { startActivity(rate) }
         AlertDialog.Builder(requireContext())
             .setView(view.root)
             .setPositiveButton(R.string.confirm) { dialog, _ -> dialog.dismiss() }
