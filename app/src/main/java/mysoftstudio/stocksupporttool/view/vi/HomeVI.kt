@@ -6,4 +6,5 @@ interface HomeVI {
     fun showErrorMessage(resource: Int)
     fun showResult(resultData: ResultData)
     fun showAbout()
+    fun changeState(state: Boolean)
 }

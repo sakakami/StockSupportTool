@@ -26,6 +26,7 @@ class HomeV : Fragment(), HomeVI {
     private val binding get() = _binding!!
     private val p by lazy { HomeP(this) }
     private var checked by Preferences("isChecked", false)
+    private var isCalculated = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -50,10 +51,27 @@ class HomeV : Fragment(), HomeVI {
     }
 
     override fun showResult(resultData: ResultData) {
-        binding.txtBuyResult.text = resultData.buy.toString()
         binding.txtBalanceResult.text = resultData.balance.toString()
         binding.txtIncomeResult.text = resultData.income.toString()
-        binding.txtRateResult.text = resultData.rate
+        binding.txtSelectUnit.text = resultData.resultUnit
+        binding.txtSelect.text = resultData.resultTitle
+        binding.txtSelectResult.text = resultData.result
+    }
+
+    override fun changeState(state: Boolean) {
+        isCalculated = state
+        if (state) {
+            binding.txtCalculate.text = getString(R.string.view_d_title_clear)
+        } else {
+            binding.editStock.setText("")
+            binding.editCost.setText("")
+            binding.editFee.setText("")
+            binding.editTarget.setText("")
+            binding.editRate.setText("")
+            binding.txtCalculate.text = getString(R.string.view_d_title_calculate)
+            binding.radioGroup.check(R.id.rbTarget)
+            binding.checkbox.isChecked = false
+        }
     }
 
     override fun showAbout() {
@@ -72,25 +90,33 @@ class HomeV : Fragment(), HomeVI {
     }
 
     private fun init() {
-        //設定edit只能輸入浮點數
+        //設定成本均價edit只能輸入浮點數
         binding.editCost.inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL
         binding.editCost.addTextChangedListener { p.handleCost(it.toString()) }
         binding.checkbox.setOnCheckedChangeListener { _, isChecked -> p.handleCheck(isChecked) }
-        //設定edit只能輸入浮點數
+        //設定手續費edit只能輸入浮點數
         binding.editFee.inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL
         binding.editFee.addTextChangedListener { p.handleFee(it.toString()) }
-        //設定edit只能輸入浮點數
+        //設定目標價格edit只能輸入浮點數
         binding.editTarget.inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL
         binding.editTarget.addTextChangedListener { p.handleTarget(it.toString()) }
-        //設定edit只能輸入正整數
+        //設定持有股數edit只能輸入正整數
         binding.editStock.inputType = InputType.TYPE_CLASS_NUMBER
         binding.editStock.addTextChangedListener { p.handleStock(it.toString()) }
-        binding.txtCalculate.setOnClickListener { p.handleCalculate() }
+
+        binding.txtCalculate.setOnClickListener { if (isCalculated) p.handleResetData() else p.handleCalculate() }
+        //設定目標成數edit只能輸入浮點數
+        binding.editRate.inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL
+        binding.editRate.addTextChangedListener { p.handleRate(it.toString()) }
         //設定tool bar的menu清單內容
         binding.toolbar.inflateMenu(R.menu.menu)
         //設定menu內夜間模式是否啟用
         binding.toolbar.menu.findItem(R.id.menu_switch).isChecked = checked
         binding.toolbar.setOnMenuItemClickListener { p.handleMenuClick(it) }
+        //設定預設選項
+        binding.radioGroup.check(R.id.rbTarget)
+        //監聽選項更變
+        binding.radioGroup.setOnCheckedChangeListener { _, checkedId -> p.handleRadioCheckedChanging(checkedId) }
         showResult(ResultData())
     }
 }
