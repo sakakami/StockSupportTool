@@ -410,8 +410,8 @@
     <View
         android:id="@+id/viewC"
         style="@style/viewStyle"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -419,17 +419,71 @@
 
     <TextView
         android:id="@+id/txtCalculate"
+        style="@style/TextViewStyle"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="80dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:gravity="center"
         android:text="@string/view_d_title_calculate"
         android:textSize="30sp"
-        style="@style/TextViewStyle"
         app:layout_constraintBottom_toBottomOf="@+id/viewC"
         app:layout_constraintEnd_toEndOf="@+id/viewC"
         app:layout_constraintStart_toStartOf="@+id/viewC"
         app:layout_constraintTop_toTopOf="@+id/viewC" />
+
+    <View
+        android:id="@+id/viewD"
+        style="@style/viewStyle"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewB" />
+
+    <TextView
+        android:id="@+id/txtClean"
+        style="@style/TextViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="@string/view_d_title_clear"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewD"
+        app:layout_constraintEnd_toEndOf="@+id/viewD"
+        app:layout_constraintStart_toStartOf="@+id/viewD"
+        app:layout_constraintTop_toTopOf="@+id/viewD" />
+
+    <View
+        android:id="@+id/viewE"
+        style="@style/viewStyle"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewB" />
+
+    <TextView
+        android:id="@+id/txtClean2"
+        style="@style/TextViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="@string/view_d_title_clear_2"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewE"
+        app:layout_constraintEnd_toEndOf="@+id/viewE"
+        app:layout_constraintStart_toStartOf="@+id/viewE"
+        app:layout_constraintTop_toTopOf="@+id/viewE" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

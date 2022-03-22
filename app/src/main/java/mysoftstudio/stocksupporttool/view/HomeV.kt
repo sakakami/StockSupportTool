@@ -26,7 +26,6 @@ class HomeV : Fragment(), HomeVI {
     private val binding get() = _binding!!
     private val p by lazy { HomeP(this) }
     private var checked by Preferences("isChecked", false)
-    private var isCalculated = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -58,20 +57,22 @@ class HomeV : Fragment(), HomeVI {
         binding.txtSelectResult.text = resultData.result
     }
 
-    override fun changeState(state: Boolean) {
-        isCalculated = state
-        if (state) {
-            binding.txtCalculate.text = getString(R.string.view_d_title_clear)
-        } else {
-            binding.editStock.setText("")
-            binding.editCost.setText("")
-            binding.editFee.setText("")
-            binding.editTarget.setText("")
-            binding.editRate.setText("")
-            binding.txtCalculate.text = getString(R.string.view_d_title_calculate)
-            binding.radioGroup.check(R.id.rbTarget)
-            binding.checkbox.isChecked = false
-        }
+    override fun cleanData() {
+        binding.editStock.setText("")
+        binding.editCost.setText("")
+        binding.editFee.setText("")
+        binding.editTarget.setText("")
+        binding.editRate.setText("")
+        binding.radioGroup.check(R.id.rbTarget)
+        binding.checkbox.isChecked = false
+    }
+
+    override fun cleanPartOfData() {
+        binding.editFee.setText("")
+        binding.editTarget.setText("")
+        binding.editRate.setText("")
+        binding.radioGroup.check(R.id.rbTarget)
+        binding.checkbox.isChecked = false
     }
 
     override fun showAbout() {
@@ -104,7 +105,9 @@ class HomeV : Fragment(), HomeVI {
         binding.editStock.inputType = InputType.TYPE_CLASS_NUMBER
         binding.editStock.addTextChangedListener { p.handleStock(it.toString()) }
 
-        binding.txtCalculate.setOnClickListener { if (isCalculated) p.handleResetData() else p.handleCalculate() }
+        binding.txtCalculate.setOnClickListener { p.handleCalculate() }
+        binding.txtClean.setOnClickListener { p.handleResetData() }
+        binding.txtClean2.setOnClickListener { p.handleResetPartOfData() }
         //設定目標成數edit只能輸入浮點數
         binding.editRate.inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL
         binding.editRate.addTextChangedListener { p.handleRate(it.toString()) }

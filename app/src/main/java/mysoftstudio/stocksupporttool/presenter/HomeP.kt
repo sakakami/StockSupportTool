@@ -62,7 +62,18 @@ class HomeP(private val vi: HomeVI) {
         rateChecked = false
         targetChecked = true
         vi.showResult(ResultData())
-        vi.changeState(false)
+        vi.cleanData()
+    }
+
+    fun handleResetPartOfData() {
+        isCheck = false
+        fee = 0.00145
+        target = 0.0
+        rate = 0.0
+        rateChecked = false
+        targetChecked = true
+        vi.showResult(ResultData())
+        vi.cleanPartOfData()
     }
 
     fun handleCalculate() {
@@ -101,7 +112,6 @@ class HomeP(private val vi: HomeVI) {
                     resultData.resultTitle = MyApplication.instance.getString(R.string.view_b_title_result_b)
                 }
                 vi.showResult(resultData)
-                vi.changeState(true)
             }
         }
     }
