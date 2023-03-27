@@ -8,6 +8,7 @@ import mysoftstudio.stocksupporttool.R
 import mysoftstudio.stocksupporttool.data.ResultData
 import mysoftstudio.stocksupporttool.view.vi.HomeVI
 import java.math.BigDecimal
+import java.math.RoundingMode
 
 class HomeP(private val vi: HomeVI) {
     private var checked by Preferences("isChecked", false)
@@ -78,9 +79,9 @@ class HomeP(private val vi: HomeVI) {
 
     fun handleCalculate() {
         val resultData = ResultData()
-        var balance = 0.0
-        var income = 0
-        var result = 0.0
+        val balance: Double
+        var income: Int
+        var result: Double
         vi.showResult(resultData)
         when {
             cost == 0.0 -> vi.showErrorMessage(R.string.error_message_cost)
@@ -89,14 +90,14 @@ class HomeP(private val vi: HomeVI) {
             stock == 0 && target > 0.0 -> vi.showErrorMessage(R.string.error_message_stock)
             else -> {
                 balance = if (isCheck) cost * (1.003 + fee / 1000.0) else cost * 1.00445
-                resultData.balance = BigDecimal(balance).setScale(2, BigDecimal.ROUND_UP).toDouble()
+                resultData.balance = BigDecimal(balance).setScale(2, RoundingMode.UP).toDouble()
                 if (targetChecked) {
                     val taxAndFee = if (isCheck) target * (0.003 + fee / 1000.0) else target * 0.00445
                     val difference = target - taxAndFee - cost
                     result = difference / (cost + taxAndFee) * 100.0
                     income = (difference * stock).toInt()
-                    resultData.income = BigDecimal(income).setScale(0, BigDecimal.ROUND_HALF_UP).toInt()
-                    resultData.result = BigDecimal(result).setScale(2, BigDecimal.ROUND_HALF_UP).toString()
+                    resultData.income = BigDecimal(income).setScale(0, RoundingMode.HALF_UP).toInt()
+                    resultData.result = BigDecimal(result).setScale(2, RoundingMode.HALF_UP).toString()
                     resultData.resultUnit = MyApplication.instance.getString(R.string.unit_percent)
                     resultData.resultTitle = MyApplication.instance.getString(R.string.view_b_title_result_a)
                 }
@@ -106,8 +107,8 @@ class HomeP(private val vi: HomeVI) {
                     val difference = targetMoney - cost
                     result = if (isCheck) targetMoney * (1.003 + fee / 1000.0) else targetMoney * 1.00445
                     income = (difference * stock).toInt()
-                    resultData.income = BigDecimal(income).setScale(0, BigDecimal.ROUND_HALF_UP).toInt()
-                    resultData.result = BigDecimal(result).setScale(2, BigDecimal.ROUND_UP).toString()
+                    resultData.income = BigDecimal(income).setScale(0, RoundingMode.HALF_UP).toInt()
+                    resultData.result = BigDecimal(result).setScale(2, RoundingMode.UP).toString()
                     resultData.resultUnit = MyApplication.instance.getString(R.string.unit_money)
                     resultData.resultTitle = MyApplication.instance.getString(R.string.view_b_title_result_b)
                 }

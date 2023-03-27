@@ -1,7 +1,10 @@
 package mysoftstudio.stocksupporttool.view
 
 import android.content.Intent
+import android.content.pm.PackageInfo
+import android.content.pm.PackageManager
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.text.InputType
 import androidx.fragment.app.Fragment
@@ -30,7 +33,7 @@ class HomeV : Fragment(), HomeVI {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentHomeVBinding.inflate(inflater, container, false)
         init()
         return binding.root
@@ -77,7 +80,7 @@ class HomeV : Fragment(), HomeVI {
 
     override fun showAbout() {
         val view = DialogMenuAboutBinding.inflate(LayoutInflater.from(requireContext()))
-        val version = requireContext().packageManager.getPackageInfo(requireContext().packageName, 0).versionName
+        val version = getVersion().versionName
         val project = Intent(Intent.ACTION_VIEW).apply { data = Uri.parse("https://github.com/sakakami/StockSupportTool") }
         val rate = Intent(Intent.ACTION_VIEW).apply { data = Uri.parse("https://play.google.com/store/apps/details?id=mysoftstudio.stocksupporttool") }
         view.txtResultVersion.text = version
@@ -121,5 +124,14 @@ class HomeV : Fragment(), HomeVI {
         //監聽選項更變
         binding.radioGroup.setOnCheckedChangeListener { _, checkedId -> p.handleRadioCheckedChanging(checkedId) }
         showResult(ResultData())
+    }
+
+    @Suppress("DEPRECATION")
+    private fun getVersion(): PackageInfo {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            requireContext().packageManager.getPackageInfo(requireContext().packageName, PackageManager.PackageInfoFlags.of(0))
+        } else {
+            requireContext().packageManager.getPackageInfo(requireContext().packageName, 0)
+        }
     }
 }
