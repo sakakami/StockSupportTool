@@ -10,8 +10,8 @@ android {
         applicationId "mysoftstudio.stocksupporttool"
         minSdk 24
         targetSdk 33
-        versionCode 9
-        versionName "1.2.1"
+        versionCode 10
+        versionName "1.2.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -32,6 +32,7 @@ android {
     buildFeatures {
         viewBinding true
     }
+    namespace 'mysoftstudio.stocksupporttool'
 }
 
 dependencies {
